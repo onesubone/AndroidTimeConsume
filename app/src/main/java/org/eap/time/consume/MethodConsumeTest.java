@@ -15,9 +15,9 @@ public class MethodConsumeTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
-            AndroidLogger.d("eap.MethodConsumeTest.finally block");
+            AndroidLogger1.d("eap.MethodConsumeTest.finally block");
         }
-        AndroidLogger.i("eap.MethodConsumeTest method consume "
+        AndroidLogger1.i("eap.MethodConsumeTest method consume "
                 + (SystemClock.elapsedRealtime() - t1));
     }
 
@@ -25,11 +25,11 @@ public class MethodConsumeTest {
         long t1 = SystemClock.elapsedRealtime();
         try {
             Set<String> res = new HashSet<>();
-            AndroidLogger.d("" + a);
-            AndroidLogger.d("" + b);
-            AndroidLogger.d("" + c);
-            AndroidLogger.d("" + d);
-            AndroidLogger.d("" + e);
+            AndroidLogger1.d("" + a);
+            AndroidLogger1.d("" + b);
+            AndroidLogger1.d("" + c);
+            AndroidLogger1.d("" + d);
+            AndroidLogger1.d("" + e);
             Thread.sleep(100);
             res.addAll(input.values());
             return res;
@@ -37,8 +37,8 @@ public class MethodConsumeTest {
             ex.printStackTrace();
             return null;
         } finally {
-            AndroidLogger.d("eap.MethodConsumeTest.finally block");
-            AndroidLogger.i("eap.MethodConsumeTest method consume "
+            AndroidLogger1.d("eap.MethodConsumeTest.finally block");
+            AndroidLogger1.i("eap.MethodConsumeTest method consume "
                     + (SystemClock.elapsedRealtime() - t1));
         }
     }

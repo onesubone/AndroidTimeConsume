@@ -84,14 +84,14 @@ public class MethodConsumeTestCases {
             Thread.sleep(100);
             res.put("b", b);
             res.put("c", c);
-            AndroidLogger.debug("Running block!");
+            AndroidLogger1.debug("Running block!");
             return res;
         } catch (InterruptedException e) {
             e.printStackTrace();
-            AndroidLogger.debug("Exception catch block!");
+            AndroidLogger1.debug("Exception catch block!");
             return null;
         } finally {
-            AndroidLogger.debug("finally block!");
+            AndroidLogger1.debug("finally block!");
         }
     }
 }
